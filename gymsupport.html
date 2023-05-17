@@ -137,10 +137,11 @@
     </div>
 
     <script>
-        function showScript() {
+        function showResult() {
           let q1 = document.getElementsByName('q1');
           let q2 = document.getElementsByName('q2');
-      
+          document.getElementById('aswer1').style.display = 'block'
+
           if(q1[0].checked && q2[0].checked) {
               document.getElementById('answermagic-title').innerHTML = 'Вы выбрали: мужской пол, похудение.';
               document.getElementById('answer-title').innerHTML = '<b>Прежде все вам нужно повысить кардионагрузку, создать дефицит калорий (1500 - 2000)  для успешного похудения! Оптимальный режим тренировок: 18 - 24 повторений.</b>';
