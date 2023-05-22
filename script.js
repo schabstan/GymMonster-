@@ -27,26 +27,30 @@ function search(){
     let name = document.getElementById('search').value;
     let productNumber = null;
     
-    let cards = document.getElementsByClassName('card');
+    let cards = document.getElementsByClassName('prod');
     for(let i = 0; i< cards.length; i++){
-        cards[i].style.display = cards[i].toLowerCase().test(name.toLowerCase()) ? "inline-block" : "none";
+        cards[i].style.display = cards[i].querySelector('.product-name').innerText.toLowerCase().test(name.toLowerCase()) ? "inline-block" : "none";
     }
 
 }
 
 function loaded() {
+
     let searchbox = document.getElementById('search');
     searchbox.addEventListener('keydown', function (key) {
         if(key.key == 'Enter')
             search();
     });
+
+    const resultButton = document.querySelector('.test-button input');
+    const answerBlock = document.getElementById('aswer1');
+    resultButton.addEventListener('click', function() {
+        answerBlock.style.display = 'block';
+    });
+
 }
 
-const resultButton = document.querySelector('.test-button input');
-const answerBlock = document.getElementById('aswer1');
-resultButton.addEventListener('click', function() {
-    answerBlock.style.display = 'block';
-});
+
 
 
 
