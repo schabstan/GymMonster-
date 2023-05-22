@@ -29,7 +29,7 @@ function search(){
     
     let cards = document.getElementsByClassName('prod');
     for(let i = 0; i< cards.length; i++){
-        cards[i].style.display = cards[i].querySelector('.product-name').innerText.toLowerCase().test(name.toLowerCase()) ? "inline-block" : "none";
+        cards[i].style.display = cards[i].querySelector('.product-name').innerText.toLowerCase().includes(name.toLowerCase()) ? "inline-block" : "none";
     }
 
 }
