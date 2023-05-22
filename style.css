@@ -161,6 +161,10 @@ nav .searchbox button:hover{
 
 /*----------------------- body ------------------------------ */
 
+.prodhold{
+    text-align: center
+}
+
 .prod {
     margin-top: 226px;
     display: inline-block;
